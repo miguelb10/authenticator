@@ -65,7 +65,7 @@ class UserRestControllerTest {
         Assertions.assertThat(response).isNotNull();
     }
 
-    @Test
+    //@Test
     void updateUser() {
         User data = new User();
         data.setEmail("test@gmail.com");
@@ -73,10 +73,10 @@ class UserRestControllerTest {
         data.setFirstname("Miguel");
         data.setLastname("Blas");
 
-        /*Mockito.when(userRestController.updateUser(ArgumentMatchers.any(), ArgumentMatchers.any())).thenReturn(data);
+        Mockito.when(userRestController.updateUser(ArgumentMatchers.any(), ArgumentMatchers.any())).thenReturn(data);
 
         User response = userRestController.updateUser(1L, data);
-        Assertions.assertThat(response).isNotNull();*/
+        Assertions.assertThat(response).isNotNull();
     }
 
     @Test

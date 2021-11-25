@@ -51,9 +51,9 @@ class UserServiceImplTest {
         Mockito.verify(iUserDao, Mockito.times(1)).findAll();
     }
 
-    //@Test
+    @Test
     void findById() {
-        Mockito.when(iUserDao.findById(1L).orElse(null)).thenReturn(user);
+        Mockito.when(iUserDao.findById(1L)).thenReturn(Optional.ofNullable(user));
         User userData = userService.findById(1L);
         assertEquals(userData,user);
     }
